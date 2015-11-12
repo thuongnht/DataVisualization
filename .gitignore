@@ -1,0 +1,7 @@
+ThuongScore/node_modules/*
+ThuongScore/.idea/*
+ThuongScore/public/js/lib/angular-1.4.7/docs
+ThuongScore/public/js/lib/angular-1.4.7/i18n
+
+*/node_modules/*
+*/.idea/*

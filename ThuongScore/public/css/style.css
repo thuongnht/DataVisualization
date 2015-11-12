@@ -1,0 +1,325 @@
+@font-face {
+    font-family: content;
+    src: url("../fonts/FontAwesome.otf") format('opentype');
+}
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+   border: 0;
+   font-family: content;
+   font-size: 100%;
+   font-style: inherit;
+   font-weight: inherit;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   vertical-align: baseline;
+}
+html {
+   font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+   overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+   -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+   -ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+   box-sizing: border-box; /* Apply a natural box layout model to the document; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+}
+*, *:before, *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+   box-sizing: inherit;
+}
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+body {
+   background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+.wrapper {
+   width: 94%;
+   margin:0 auto;
+}
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+ol, ul {
+   list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+   border-collapse: separate;
+   border-spacing: 0;
+}
+caption, th, td {
+   font-weight: normal;
+   text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+   content: "";
+}
+blockquote, q {
+   quotes: "" "";
+}
+a:hover, a:active {
+   outline: 0;
+}
+a img, .post-container img {
+   border: 0;
+   transition: all 0.8s cubic-bezier(0.83, 0.08, 0.88, 0.51) 0s;
+   display: block;
+   margin: 0;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+body, button, input, select, textarea {
+   color: #404040;
+   font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+   clear: both;
+}
+p {
+   color: #646464;
+   margin-bottom: 1.5em;
+   overflow: hidden;
+}
+b, strong {
+   font-weight: bold;
+}
+dfn, cite{
+   margin:5px;
+   text-transform:uppercase;
+   display:block;
+}
+i {
+   margin:5px;
+   display:block;
+}
+blockquote {
+   border-left: 2px solid #ffc800;
+   font-style: italic;
+   padding: 0 0 0 1.5em;
+}
+em {
+   font-style: italic;
+   text-transform: none;
+}
+address {
+   margin: 0 0 1.5em;
+}
+pre {
+   background: #eee;
+   font-family: "Courier 10 Pitch", Courier, monospace;
+   font-size: 15px;
+   font-size: 1.5rem;
+   line-height: 1.6;
+   margin-bottom: 1.6em;
+   max-width: 100%;
+   overflow: auto;
+   padding: 1.6em;
+}
+code, kbd, tt, var {
+   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+   font-size: 15px;
+   font-size: 1.5rem;
+}
+abbr, acronym {
+   border-bottom: 1px dotted #666;
+   cursor: help;
+}
+mark, ins {
+   background: #fff9c0;
+   text-decoration: none;
+}
+sup, sub {
+   font-size: 75%;
+   height: 0;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+}
+sup {
+   bottom: 1ex;
+}
+sub {
+   top: .5ex;
+}
+small {
+   font-size: 75%;
+}
+big {
+   font-size: 125%;
+}
+h1 {
+   font-size:28px;
+}
+h2 {
+   font-size:22px;
+}
+h3 {
+   font-size:20px;
+}
+h4 {
+   font-size:16px;
+}
+h5 {
+   font-size:18px;
+}
+h6 {
+   font-size:14px;
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+   background-color: #ccc;
+   border: 0 none;
+   height: 1px;
+   margin:-3px 0 25px 23.5%;
+   opacity: 0.22;
+}
+.underline {
+   background: none repeat scroll 0 0 #ffc800;
+   height: 5px;
+   margin: 20px 0 0;
+   width: 23.5%;
+}
+ul, ol {
+   margin: 0px 0px 1.5em 3em;
+}
+.comment-list > ul, .comments-area > ol {
+   margin: 0;
+   padding: 0;
+}
+ul {
+   list-style: disc;
+}
+ol {
+   list-style: decimal;
+}
+li > ul, li > ol {
+   margin-bottom: 0;
+   margin-left: 1.5em;
+}
+dt {
+   font-weight: bold;
+}
+dd {
+   margin: 0 1.5em 1.5em;
+}
+img {
+   height: auto; /* Make sure images are scaled correctly. */
+   max-width: 100%; /* Adhere to container width. */
+}
+figure {
+   margin: 0;
+   overflow: hidden;
+}
+table {
+   margin: 0 0 1.5em;
+   width: 100%;
+}
+th {
+   font-weight: bold;
+}
+.button {
+   color: #ffc800;
+}
+.button:hover{
+   color:#1d1d1d;
+}
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+button, input, select, textarea {
+   font-size: 100%; /* Corrects font size not being inherited in all browsers */
+   margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+   vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+   background: none repeat scroll 0 0 #ffc800;
+   border: medium none;
+   color: #333;
+   cursor: pointer;
+   font-weight: 600;
+   padding: 10px 0 6px;
+   text-transform: uppercase;
+   width: 100%;
+}
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+   background: #333;
+   color: #ffc800;
+}
+button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
+   background: #333;
+   color: #ffc800;
+   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"], input[type="radio"] {
+   padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+   -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+   box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+   -webkit-appearance: none;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+   color: #ffc800;
+}
+.nav-header input[type="text"]:focus {
+   color: #ffc800;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
+   color: #333;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
+   padding: 15px;
+   width:100%;
+}
+input[type="search"] {
+   box-sizing: border-box;
+   width: 100%;
+}
+textarea {
+   overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+   padding-left: 3px;
+   vertical-align: top; /* Improves readability and alignment in all browsers */
+   width: 100%;
+}
+/*CSS Hier*/
+.graph-svg-component {
+   //background: red;
+}
+
+.axis path,
+.axis line {
+   fill: none;
+   stroke: black;
+   shape-rendering: crispEdges;
+}
+
+.axis text {
+   font-family: sans-serif;
+   font-size: 10px;
+}
+
+.title {
+   font-size: 150%;
+   font-weight: bold;
+}
+
+.xLabel, .yLabel {
+   font-size: 110%;
+   font-weight: bold;
+}
+
+@media only screen and (min-width:150px) and (max-width:640px)
+{
+    
+    
+    
+}
